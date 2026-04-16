@@ -25,6 +25,7 @@ class Shot(MDBoxLayout):
 class GameScreen(MDScreen):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        
         Clock.schedule_interval(self.update, 1 / FPS)
 
         self.eventkeys = {}

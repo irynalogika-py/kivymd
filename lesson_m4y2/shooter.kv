@@ -1,4 +1,8 @@
 #:set color_cosmos 0.2, 0, 0.1, 1
+#:set material_red [1, 0, 0, 0]
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+
+#:set color_button get_color_from_hex("#32CD32")
 
 
 <MainScreen>:
@@ -63,19 +67,18 @@
 
             MDFloatingActionButton:
                icon: "arrow-left-bold"
+               md_bg_color: color_button
                on_press: root.pressKey('left')
                on_release: root.releaseKey('left')
 
             MDFloatingActionButton:
                icon: "arrow-right-bold"
-               md_bg_color: app.theme_cls.primary_color
                on_press: root.pressKey('right')
                on_release: root.releaseKey('right')
 
             Widget:
             MDFloatingActionButton:
                icon: "arrow-up-bold"
-               md_bg_color: app.theme_cls.primary_color
                on_press: root.pressKey('shot')
                on_release: root.releaseKey('shot')
 
